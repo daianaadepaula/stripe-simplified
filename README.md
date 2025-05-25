@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Subscription Platform with Stripe, Clerk & Convex
 
-## Getting Started
+A modern and fully-featured SaaS starter built with Next.js 14, Clerk for authentication, Stripe for payments (one-time and subscriptions), Convex for real-time backend functions, and Resend for transactional emails. Includes a billing portal, dark/light mode support, rate limiting, and production-ready configurations.
 
-First, run the development server:
+## 🚀 Tech Stack
+
+**Frontend:** Next.js 14, React 18, Tailwind CSS, Lucide React, Radix UI, Sonner (Toast Notifications), Framer Motion  
+**Backend/Infra:** Convex, Stripe, Clerk, Upstash Redis, Resend (email delivery), Svix (webhooks)
+**Utilities:** Tailwind Merge, Tailwind CSS Animate, Class Variance Authority, CLSX  
+**Developer Experience:** TypeScript, ESLint, PostCSS, Environment Variables, Project structured with best practices
+
+## 🔑 Features
+
+- One-time payments with Stripe
+- Subscriptions (Monthly & Yearly billing)
+- Billing portal for customer management
+- Authentication using Clerk
+- Secure webhook integration via Svix
+- Transactional emails using Resend and React Email
+- Rate limiting with Upstash Redis
+- Dark and Light theme support
+- Reusable components and clean code architecture
+- Optimized developer experience with ESLint and TypeScript
+
+## 📦 Installation
+
+### 1. Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/daianaadepaula/stripe-simplified.git
+cd stripe-simplified
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install dependencies for both frontend and backend:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+   npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a .env file in the root directory with the following content:
 
-## Learn More
+```bash
+# Convex
+CONVEX_DEPLOYMENT=...
+NEXT_PUBLIC_CONVEX_URL=...
+# Clerk Auth
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=...
+CLERK_SECRET_KEY=...
+# Stripe Billing
+STRIPE_SECRET_KEY=...
+STRIPE_WEBHOOK_SECRET=...
+STRIPE_MONTHLY_PRICE_ID=...
+STRIPE_YEARLY_PRICE_ID=...
+# Redis Rate Limiting
+UPSTASH_REDIS_REST_URL=...
+UPSTASH_REDIS_REST_TOKEN=...
+# Email via Resend
+RESEND_API_KEY=...
+# App
+NEXT_PUBLIC_APP_URL=...
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 3. Run the application in development mode:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+ ```bash
+   npm run dev
+ ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The app will be running at: [http://localhost:3000](http://localhost:3000)
 
-## Deploy on Vercel
+## Scripts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Development**: npm run dev — Starts the development server.
+- **Production**: npm start — Starts the production server.
+- **Build**: npm run build — Builds the project for production.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🧪 Best Practices
+
+* Authentication and authorization with Clerk
+* Secure, scalable payments via Stripe
+* Emails built with @react-email components
+* Rate limiting to protect sensitive endpoints
+* Modular architecture and clean separation of concerns
+* Built-in toast notifications with Sonner
+* Dark mode with next-themes
+* Fully typed with TypeScript
+* Reusable components and hooks
+* Webhook support and validation with Svix
+
+## 👤 Author
+
+Name: Daiana de Paula </br>
+Email: daianaadepaula1@gmail.com </br>
+LinkedIn: [https://www.linkedin.com/in/daianadepaula](https://www.linkedin.com/in/daianadepaula/) </br>
+
+## 📄 License
+
+This project is licensed under the MIT License.
